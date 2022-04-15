@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "UNO Project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "test"
   },
