@@ -1,0 +1,25 @@
+{
+  "name": "play_uno",
+  "version": "1.0.0",
+  "description": "UNO Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhomas06/Play_Uno.git"
+  },
+  "keywords": [
+    "UNO"
+  ],
+  "author": "Tomas Navas Gutierrez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zhomas06/Play_Uno/issues"
+  },
+  "homepage": "https://github.com/Zhomas06/Play_Uno#readme",
+  "dependencies": {
+    "vite": "^2.9.5"
+  }
+}
