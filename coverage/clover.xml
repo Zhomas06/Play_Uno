@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650023878656" clover="3.2.0">
-  <project timestamp="1650023878656" name="All files">
-    <metrics statements="45" coveredstatements="26" conditionals="10" coveredconditionals="5" methods="13" coveredmethods="4" elements="68" coveredelements="35" complexity="0" loc="45" ncloc="45" packages="1" files="3" classes="3"/>
+<coverage generated="1650039471884" clover="3.2.0">
+  <project timestamp="1650039471884" name="All files">
+    <metrics statements="87" coveredstatements="75" conditionals="36" coveredconditionals="24" methods="26" coveredmethods="24" elements="149" coveredelements="123" complexity="0" loc="87" ncloc="87" packages="1" files="3" classes="3"/>
     <file name="Card_Class.js" path="C:\Users\Usuario\Desktop\full_stack\Play_Uno\src\Card_Class.js">
-      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <line num="5" count="60" type="stmt"/>
-      <line num="6" count="60" type="stmt"/>
-      <line num="7" count="60" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="15" count="0" type="stmt"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="5" count="69" type="stmt"/>
+      <line num="6" count="69" type="stmt"/>
+      <line num="7" count="69" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
     </file>
     <file name="Game_Class.js" path="C:\Users\Usuario\Desktop\full_stack\Play_Uno\src\Game_Class.js">
-      <metrics statements="35" coveredstatements="23" conditionals="10" coveredconditionals="5" methods="7" coveredmethods="3"/>
+      <metrics statements="73" coveredstatements="62" conditionals="36" coveredconditionals="24" methods="16" coveredmethods="15"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
       <line num="7" count="1" type="stmt"/>
@@ -25,36 +26,77 @@
       <line num="22" count="1" type="stmt"/>
       <line num="23" count="2" type="stmt"/>
       <line num="24" count="8" type="stmt"/>
-      <line num="31" count="1351" type="stmt"/>
-      <line num="32" count="5" type="stmt"/>
-      <line num="33" count="5" type="stmt"/>
-      <line num="34" count="5" type="stmt"/>
-      <line num="35" count="5" type="stmt"/>
-      <line num="36" count="5" type="stmt"/>
-      <line num="44" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="45" count="2" type="stmt"/>
-      <line num="47" count="2" type="cond" truecount="3" falsecount="1"/>
-      <line num="48" count="2" type="stmt"/>
-      <line num="51" count="0" type="stmt"/>
-      <line num="52" count="0" type="stmt"/>
-      <line num="54" count="0" type="stmt"/>
-      <line num="58" count="0" type="stmt"/>
-      <line num="63" count="0" type="stmt"/>
-      <line num="64" count="0" type="stmt"/>
-      <line num="65" count="0" type="stmt"/>
-      <line num="66" count="0" type="stmt"/>
-      <line num="68" count="0" type="stmt"/>
-      <line num="74" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="75" count="0" type="stmt"/>
-      <line num="77" count="0" type="stmt"/>
+      <line num="31" count="6152" type="stmt"/>
+      <line num="32" count="23" type="stmt"/>
+      <line num="33" count="23" type="stmt"/>
+      <line num="34" count="23" type="stmt"/>
+      <line num="36" count="23" type="stmt"/>
+      <line num="37" count="23" type="stmt"/>
+      <line num="38" count="23" type="stmt"/>
+      <line num="45" count="21" type="stmt"/>
+      <line num="47" count="21" type="cond" truecount="2" falsecount="0"/>
+      <line num="49" count="2" type="stmt"/>
+      <line num="51" count="19" type="cond" truecount="4" falsecount="0"/>
+      <line num="52" count="2" type="stmt"/>
+      <line num="55" count="17" type="stmt"/>
+      <line num="56" count="95" type="stmt"/>
+      <line num="58" count="17" type="stmt"/>
+      <line num="62" count="2" type="stmt"/>
+      <line num="67" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="69" count="1" type="stmt"/>
+      <line num="71" count="10" type="stmt"/>
+      <line num="76" count="539" type="stmt"/>
+      <line num="77" count="2" type="stmt"/>
+      <line num="78" count="2" type="stmt"/>
+      <line num="80" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="82" count="1" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+      <line num="90" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="92" count="2" type="stmt"/>
+      <line num="95" count="6" type="stmt"/>
+      <line num="100" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="101" count="1" type="stmt"/>
+      <line num="106" count="11" type="stmt"/>
+      <line num="108" count="441" type="stmt"/>
+      <line num="109" count="441" type="stmt"/>
+      <line num="110" count="441" type="stmt"/>
+      <line num="113" count="11" type="stmt"/>
+      <line num="115" count="441" type="stmt"/>
+      <line num="118" count="11" type="stmt"/>
+      <line num="119" count="11" type="stmt"/>
+      <line num="120" count="11" type="stmt"/>
+      <line num="125" count="1" type="stmt"/>
+      <line num="130" count="1" type="stmt"/>
+      <line num="135" count="1" type="stmt"/>
+      <line num="140" count="4" type="stmt"/>
+      <line num="145" count="6" type="stmt"/>
+      <line num="147" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="148" count="1" type="stmt"/>
+      <line num="150" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="151" count="1" type="stmt"/>
+      <line num="157" count="1" type="stmt"/>
+      <line num="162" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="164" count="0" type="stmt"/>
+      <line num="168" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="170" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="171" count="0" type="stmt"/>
+      <line num="174" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="176" count="0" type="stmt"/>
+      <line num="181" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="183" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="185" count="0" type="stmt"/>
+      <line num="191" count="0" type="stmt"/>
     </file>
     <file name="Player.js" path="C:\Users\Usuario\Desktop\full_stack\Play_Uno\src\Player.js">
-      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <line num="7" count="0" type="stmt"/>
-      <line num="8" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="19" count="0" type="stmt"/>
-      <line num="20" count="0" type="stmt"/>
+      <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+      <line num="7" count="97" type="stmt"/>
+      <line num="8" count="97" type="stmt"/>
+      <line num="13" count="443" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="35" count="6" type="stmt"/>
     </file>
   </project>
 </coverage>

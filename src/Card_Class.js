@@ -7,12 +7,18 @@ export class Card {
         this.additional_action = add; // Some cards are dynamic, and require more acction before using them (like +4 and change color) 
     }
 
-    number(){
+    get_number(){
         return this.number;
     }
 
-    type(){
+    get_type(){
         return this.type;
+    }
+
+    get_additional_action(){
+
+        return this.additional_action;
+
     }
 }
 
