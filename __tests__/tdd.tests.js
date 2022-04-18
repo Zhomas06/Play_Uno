@@ -158,14 +158,87 @@ test('Inverse turn and Refresh turn 1', () => {
   expect(The_Game.get_turn()).toStrictEqual(The_Game.get_number_of_players()-1);
 });
 
-test('Create the method turn', () => {
-  let The_Player = new Player();  
-  let One_card = new Card(1,"Red", true);
-  The_Player.add_card(One_card);
-  The_Player.remove_card(One_card);
-  expect(The_Player.get_card(0)).not.toBeDefined();
+test('Create the method winner', () => {
+  let The_Game = new Game();
+  The_Game.config_game(2,1);
+  expect(The_Game.winner()).toBeDefined();
 });
 
+test('Throw winner if not initiated the game', () => {
+  let The_Game = new Game();
+ 
+  expect(() => {The_Game.winner()}).toThrow();
+});
+
+test('Winner Return [false,-1] if no winner', () => {
+  let The_Game = new Game();
+  The_Game.config_game(2,1);
+  The_Game.initiate_game_deal();
+  expect(The_Game.winner()).toStrictEqual([false,-1]);
+});
+
+test('Winner Return [true,2] if winner', () => {
+  let The_Game = new Game();
+  let The_Player = new Player(2)
+  The_Game.config_game(2,1);
+  The_Game.initiate_game_deal();
+  The_Game.list_players.push(The_Player); //This is little injection of code, It is more hard to emulate a play.
+  expect(The_Game.winner()).toStrictEqual([true,2]);
+});
+
+test('Launch a card method created', () => {
+  let The_Game = new Game();
+  The_Game.config_game(2,7);
+  The_Game.initiate_game_deal();
+  expect(The_Game.launch(0,1)).toBeDefined();
+});
+
+test('Throw Launch if not initiated the game', () => {
+  let The_Game = new Game();
+ 
+  expect(() => {The_Game.launch(0,1)}).toThrow();
+});
+
+test('Launch a card method return false if is not your turn', () => {
+  let The_Game = new Game();
+  The_Game.config_game(2,7);
+  The_Game.initiate_game_deal();
+  expect(The_Game.launch(1,3)).toBe(false);
+});
+
+test('Launch return true if it is possible to put a card', () => {
+  let The_Game = new Game();
+  let The_Card = new Card(1,"Red", true);
+  The_Game.config_game(2,7);
+  
+  The_Game.last_discarted = The_Card;
+  The_Game.list_players[0].add_card(The_Card)
+  expect(The_Game.launch(0,0)).toBe(true);
+});
+
+test('Throw direction card, reverse direction', () => {
+  let The_Game = new Game();
+  let The_Card = new Card("direction","Green", true);
+  let The_Player = new Player(1);
+  The_Game.config_game(2,7);
+  The_Game.list_players.push(The_Player);
+  The_Game.last_discarted = The_Card;
+  The_Game.list_players[0].add_card(The_Card)
+  The_Game.launch(0,0)
+  expect(The_Game.direction).toBe(-1);
+});
+
+test('+4 sums +4 to the attack', () => {
+  let The_Game = new Game();
+  The_Game.increment_attacks(4)
+  expect(The_Game.pending_atacks).toBe(4);
+});
+
+test('4Color change the color of th last one', () => {
+  let The_Game = new Game();
+  The_Game.increment_attacks(4)
+  expect(The_Game.pending_atacks).toBe(4);
+});
 
 
 //Validate the class card
@@ -190,19 +263,32 @@ test('Get additional action of a card', () => {
 expect(The_Card.get_additional_action()).toBe(true);
 });
 
+test('Change color of a card', () => {
+  let The_Card = new Card(1,"Red", true);
+  The_Card.change_color("invented")
+expect(The_Card.get_type()[0]).toBe("invented");
+});
+
 //Validate the class Player
 
 test('Get the card of a player', () => {
-  let The_Player = new Player();  
+  let The_Player = new Player(1);  
   let One_card = new Card(1,"Red", true);
   The_Player.add_card(One_card);
   expect(The_Player.get_card(0)).toStrictEqual(One_card);
 });
 
+
 test('Remove the card of a player', () => {
-  let The_Player = new Player();  
+  let The_Player = new Player(1);  
   let One_card = new Card(1,"Red", true);
   The_Player.add_card(One_card);
   The_Player.remove_card(One_card);
   expect(The_Player.get_card(0)).not.toBeDefined();
+});
+
+test('Get ID from player', () => {
+  let The_Player = new Player(1);  
+
+  expect(The_Player.get_id()).toBe(1);
 });

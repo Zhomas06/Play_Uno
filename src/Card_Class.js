@@ -20,5 +20,9 @@ export class Card {
         return this.additional_action;
 
     }
+
+    change_color(color){
+        this.type = [color];
+    }
 }
 

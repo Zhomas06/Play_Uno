@@ -30,6 +30,10 @@ export class Player {
         return this.list_cards[index];
     }
 
+    get_deck(){
+
+        return this.list_cards;
+    }
     get_length_deck(){
 
         return this.list_cards.length;
