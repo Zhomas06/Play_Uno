@@ -158,6 +158,14 @@ test('Inverse turn and Refresh turn 1', () => {
   expect(The_Game.get_turn()).toStrictEqual(The_Game.get_number_of_players()-1);
 });
 
+test('Create the method turn', () => {
+  let The_Player = new Player();  
+  let One_card = new Card(1,"Red", true);
+  The_Player.add_card(One_card);
+  The_Player.remove_card(One_card);
+  expect(The_Player.get_card(0)).not.toBeDefined();
+});
+
 
 
 //Validate the class card

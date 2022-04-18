@@ -35,7 +35,7 @@ export class Game {
         
         this.initial_cards = 0;
         this.turn = 0;
-        this.pending_atacks = [];
+        this.pending_atacks = 0;
 
     }
 
@@ -165,7 +165,7 @@ export class Game {
 
         }
 
-        if (this.pending_atacks.length === 0){
+        if (this.pending_atacks === 0){
 
             if (Card.get_number() === this.discard[this.discard.length - 1].get_number()){
                 return true;
