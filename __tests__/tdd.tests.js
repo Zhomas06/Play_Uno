@@ -230,14 +230,17 @@ test('Throw direction card, reverse direction', () => {
 
 test('+4 sums +4 to the attack', () => {
   let The_Game = new Game();
+  
   The_Game.increment_attacks(4)
   expect(The_Game.pending_atacks).toBe(4);
 });
 
 test('4Color change the color of th last one', () => {
   let The_Game = new Game();
-  The_Game.increment_attacks(4)
-  expect(The_Game.pending_atacks).toBe(4);
+  let The_Card = new Card("direction","Green", true);
+  The_Game.last_discarted = The_Card;
+  The_Game.change_the_color("Red")
+  expect(The_Game.last_discarted.get_type()[0]).toBe("Red");
 });
 
 
